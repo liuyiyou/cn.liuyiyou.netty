@@ -9,12 +9,14 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LoggingHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author: liuyiyou.cn
  * @date: 2019/1/21
  * @version: V1.0
  */
+@Slf4j
 public class HelloServer {
 
     private int port;

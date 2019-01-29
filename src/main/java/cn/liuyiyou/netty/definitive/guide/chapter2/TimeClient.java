@@ -8,6 +8,7 @@ import java.net.Socket;
 
 /**
  * 代码清单2.1：同步阻塞I/O 的TimeClient
+ *
  * @author: liuyiyou.cn
  * @date: 2019/1/29
  * @version: V1.0
@@ -35,7 +36,6 @@ public class TimeClient {
                 out.close();
                 out = null;
             }
-
             if (in != null) {
                 try {
                     in.close();
