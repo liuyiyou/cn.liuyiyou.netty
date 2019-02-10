@@ -10,4 +10,6 @@ public interface RISC {
     //查询时间
     String QUERY_TIME = "QUERY_TIME";
 
+    String QUERY_TIME_ORDER = "QUERY_TIME_ORDER";
+
 }
