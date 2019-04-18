@@ -20,7 +20,7 @@ public class TimeServer2 {
         int port = 8080;
         try {
             serverSocket = new ServerSocket(port);
-            Socket socket = null;
+            Socket socket;
             TimeServerHandlerExecutePool singleExecutor = new TimeServerHandlerExecutePool(50, 10000);
             while (true) {
                 socket = serverSocket.accept();
@@ -32,7 +32,6 @@ public class TimeServer2 {
         } finally {
             if (serverSocket != null) {
                 serverSocket.close();
-                serverSocket = null;
             }
         }
     }

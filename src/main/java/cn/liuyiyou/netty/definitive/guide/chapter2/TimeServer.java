@@ -16,7 +16,7 @@ public class TimeServer {
 
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
-        Socket socket = null;
+        Socket socket;
         int port = 8080;
         try {
             serverSocket = new ServerSocket(port);
@@ -30,7 +30,6 @@ public class TimeServer {
         } finally {
             if (serverSocket != null) {
                 serverSocket.close();
-                serverSocket = null;
             }
         }
     }

@@ -1,5 +1,7 @@
 package cn.liuyiyou.netty.definitive.guide.chapter2;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,10 +11,12 @@ import java.util.Date;
 
 /**
  * 代码清单2.1：同步阻塞I/O 的 TimeServerHandler
+ *
  * @author: liuyiyou.cn
  * @date: 2019/1/29
  * @version: V1.0
  */
+@Slf4j
 public class TimeServerHandler implements Runnable {
 
     private Socket socket;
@@ -35,7 +39,7 @@ public class TimeServerHandler implements Runnable {
                 if (body == null) {
                     break;
                 }
-                System.out.println("The time sever receive order::" + body);
+                log.info("The time sever receive order::" + body);
                 currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? new Date(System.currentTimeMillis()).toString() : "BAD ORDER";
                 out.println(currentTime);
             }
